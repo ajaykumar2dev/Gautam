@@ -12,7 +12,7 @@ export function GalleryPreview() {
       <div className="shell">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
-            index="08 / 10"
+            index="06 / 06"
             eyebrow="Gallery"
             title="A visual record, designed around privacy."
             description="Abstract placeholders show the intended editorial direction. Real images should be approved, consented, and free of patient or hospital-confidential information."

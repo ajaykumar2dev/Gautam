@@ -1,0 +1,6 @@
+.next/
+.open-next/
+.wrangler/
+.wrangler-sites-bundle/
+dist/
+node_modules/

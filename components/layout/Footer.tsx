@@ -1,4 +1,4 @@
-import { ArrowUpRight, HeartPulse, Mail, MapPin } from "lucide-react";
+import { HeartPulse, MapPin } from "lucide-react";
 import Link from "next/link";
 
 import { profile } from "@/data/profile";
@@ -7,9 +7,6 @@ const footerLinks = [
   { label: "About", href: "/#about" },
   { label: "Experience", href: "/#experience" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/contact" },
-  { label: "Privacy", href: "/privacy" },
-  { label: "Resume", href: "/resume" },
 ];
 
 export function Footer() {
@@ -63,13 +60,6 @@ export function Footer() {
               <li className="flex gap-3">
                 <HeartPulse className="mt-0.5 h-4 w-4 shrink-0 text-teal-400" aria-hidden="true" />
                 Works at {profile.organization}
-              </li>
-              <li>
-                <Link className="inline-flex min-h-11 items-center gap-2 hover:text-white" href="/contact">
-                  <Mail className="h-4 w-4 text-teal-400" aria-hidden="true" />
-                  Contact form
-                  <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
-                </Link>
               </li>
             </ul>
           </div>

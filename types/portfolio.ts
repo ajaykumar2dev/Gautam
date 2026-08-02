@@ -30,28 +30,10 @@ export type ExperienceItem = {
   responsibilities: string[];
 };
 
-export type EducationItem = {
-  degree: string;
-  institution: string;
-  university: string;
-  year: string;
-  location: string;
-  status: "placeholder" | "verified";
-};
-
-export type CertificationItem = {
-  title: string;
-  category: "Laboratory" | "Safety" | "Quality" | "Clinical" | "Training";
-  issuer: string;
-  issueDate: string;
-  credentialId: string;
-  status: "placeholder" | "verified";
-};
-
 export type GalleryItem = {
   id: number;
   title: string;
-  category: "Laboratory" | "Equipment" | "Events" | "Certificates" | "Team";
+  category: "Laboratory" | "Equipment" | "Events" | "Team";
   description: string;
   src: string;
   alt: string;

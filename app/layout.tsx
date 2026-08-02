@@ -20,7 +20,7 @@ const manrope = Manrope({
 
 const title = "Amrita Gautam | Medical Laboratory Technician in Lucknow";
 const description =
-  "Professional portfolio of Amrita Gautam, a Medical Laboratory Technician at Dr. Ram Manohar Lohia Institute of Medical Sciences, showcasing laboratory expertise, experience, education, certifications, and professional focus.";
+  "Professional portfolio of Amrita Gautam, a Medical Laboratory Technician at Dr. Ram Manohar Lohia Institute of Medical Sciences, showcasing laboratory expertise, experience, and professional focus.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

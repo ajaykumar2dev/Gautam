@@ -2,16 +2,12 @@ import type { Metadata } from "next";
 
 import { AboutSection } from "@/components/sections/AboutSection";
 import { AchievementsSection } from "@/components/sections/AchievementsSection";
-import { CertificationsSection } from "@/components/sections/CertificationsSection";
-import { ContactSection } from "@/components/sections/ContactSection";
-import { EducationSection } from "@/components/sections/EducationSection";
 import { ExpertiseSection } from "@/components/sections/ExpertiseSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { GalleryPreview } from "@/components/sections/GalleryPreview";
 import { Hero } from "@/components/sections/Hero";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { StatisticsSection } from "@/components/sections/StatisticsSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { TrustRail } from "@/components/sections/TrustRail";
 import { profile } from "@/data/profile";
 import { siteUrl } from "@/lib/utils";
@@ -63,12 +59,8 @@ export default function HomePage() {
       <SkillsSection />
       <ExpertiseSection />
       <ExperienceSection />
-      <EducationSection />
-      <CertificationsSection />
       <AchievementsSection />
       <GalleryPreview />
-      <TestimonialsSection />
-      <ContactSection />
     </main>
   );
 }

@@ -9,7 +9,7 @@ export function AchievementsSection() {
     <section id="achievements" className="deferred-section section-space scroll-mt-24">
       <div className="shell">
         <SectionHeading
-          index="07 / 10"
+          index="05 / 06"
           eyebrow="Professional commitments"
           title="Values demonstrated in daily practice."
           description="These are areas of professional focus, not formal awards or institutional endorsements. Verified achievements can be added separately."

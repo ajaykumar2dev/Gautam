@@ -9,7 +9,7 @@ export function AboutSection() {
     <section id="about" className="deferred-section section-space scroll-mt-24">
       <div className="shell">
         <SectionHeading
-          index="01 / 10"
+          index="01 / 06"
           eyebrow="Professional profile"
           title="Precision is a practice, not a promise."
           description="A calm, methodical approach to laboratory support—where each step, record, and safety check matters."
@@ -47,7 +47,7 @@ export function AboutSection() {
                     </dt>
                     <dd className="mt-2 text-sm font-semibold leading-6 text-ink">
                       {fact.value}
-                      {fact.isPlaceholder ? <span className="mt-3 block text-[11px] font-semibold text-amber-700 dark:text-amber-300">Details pending</span> : null}
+                      {/* {fact.isPlaceholder ? <span className="mt-3 block text-[11px] font-semibold text-amber-700 dark:text-amber-300">Details pending</span> : null} */}
                     </dd>
                   </div>
                 );

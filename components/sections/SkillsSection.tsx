@@ -9,7 +9,7 @@ export function SkillsSection() {
     <section id="skills" className="deferred-section section-space section-surface scroll-mt-24">
       <div className="shell">
         <SectionHeading
-          index="02 / 10"
+          index="02 / 06"
           eyebrow="Capabilities"
           title="Technical care, supported by human judgment."
           description="Skills are grouped by practice area rather than assigned arbitrary percentages. The emphasis is on dependable contribution and professional conduct."

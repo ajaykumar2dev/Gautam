@@ -14,7 +14,6 @@ import { usePathname } from "next/navigation";
 
 import { navItems, profile } from "@/data/profile";
 import { cn } from "@/lib/utils";
-import { ResumeButton } from "@/components/ui/ResumeButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 type NavItem = (typeof navItems)[number];
@@ -260,7 +259,6 @@ export function Header() {
 
         <div className="hidden shrink-0 items-center gap-2 xl:flex">
           <ThemeToggle />
-          <ResumeButton />
         </div>
 
         <div className="flex items-center gap-2 xl:hidden">
@@ -322,9 +320,8 @@ export function Header() {
                 })}
               </nav>
 
-              <div className="mx-auto mt-4 grid max-w-2xl gap-2 border-t border-line pt-4 sm:grid-cols-2">
+              <div className="mx-auto mt-4 max-w-2xl border-t border-line pt-4">
                 <ThemeToggle className="w-full justify-center rounded-xl" showLabel />
-                <ResumeButton className="w-full rounded-xl" />
               </div>
             </div>
           </>

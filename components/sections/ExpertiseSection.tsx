@@ -38,7 +38,7 @@ export function ExpertiseSection() {
       <div className="shell">
         <div className="grid items-end gap-8 lg:grid-cols-[1fr_.55fr]">
           <SectionHeading
-            index="03 / 10"
+            index="03 / 06"
             eyebrow="Laboratory expertise"
             title="A systematic view of the laboratory workflow."
           />

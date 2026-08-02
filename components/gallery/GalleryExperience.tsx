@@ -22,7 +22,6 @@ const filterOptions: ReadonlyArray<{ value: GalleryFilter; label: string }> = [
   { value: "Laboratory", label: "Laboratory" },
   { value: "Equipment", label: "Medical equipment" },
   { value: "Events", label: "Professional events" },
-  { value: "Certificates", label: "Certificates" },
   { value: "Team", label: "Team activities" },
 ];
 
@@ -30,7 +29,6 @@ const categoryLabels: Record<GalleryItem["category"], string> = {
   Laboratory: "Laboratory",
   Equipment: "Medical equipment",
   Events: "Professional events",
-  Certificates: "Certificates",
   Team: "Team activities",
 };
 

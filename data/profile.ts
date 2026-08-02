@@ -15,27 +15,8 @@ export const profile = {
     "Amrita Gautam is a dedicated Medical Laboratory Technician with experience supporting diagnostic laboratory procedures, specimen collection and processing, laboratory safety, and quality assurance. Her practice is grounded in precision, timely workflow, and careful adherence to established protocols. She approaches each responsibility with respect for patient confidentiality, collaborative care, and the role accurate laboratory work plays in clinical decision-making.",
   objective:
     "To continue contributing reliable laboratory support in an environment that values quality systems, patient safety, ethical practice, and continuous professional development.",
-  email: {
-    label: "Email",
-    value: "Add professional email",
-    isPlaceholder: true,
-  },
-  phone: {
-    label: "Phone",
-    value: "Add professional phone",
-    isPlaceholder: true,
-  },
-  linkedin: {
-    label: "LinkedIn",
-    value: "Add LinkedIn profile",
-    isPlaceholder: true,
-  },
-  resume: {
-    path: "/documents/amrita-gautam-resume.pdf",
-    available: false,
-  },
   availability: "Open to relevant professional conversations",
-  languages: "Add languages",
+  languages: "English, Hindi",
 } as const;
 
 export const quickFacts: PlaceholderValue[] = [
@@ -52,8 +33,5 @@ export const navItems = [
   { label: "About", href: "/#about", section: "about" },
   { label: "Skills", href: "/#skills", section: "skills" },
   { label: "Experience", href: "/#experience", section: "experience" },
-  { label: "Education", href: "/#education", section: "education" },
-  { label: "Credentials", href: "/certifications", section: "certifications" },
   { label: "Gallery", href: "/gallery", section: "gallery" },
-  { label: "Contact", href: "/contact", section: "contact" },
 ] as const;

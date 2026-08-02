@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { GalleryExperience } from "@/components/gallery/GalleryExperience";
 
 const description =
-  "Explore Amrita Gautam's privacy-conscious professional gallery through clearly labelled, code-native placeholders for approved laboratory, learning, equipment, credential, and team imagery.";
+  "Explore Amrita Gautam's privacy-conscious professional gallery through clearly labelled, code-native placeholders for approved laboratory, learning, equipment, and team imagery.";
 
 export const metadata: Metadata = {
   title: "Professional Gallery",

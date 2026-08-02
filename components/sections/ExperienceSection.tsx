@@ -9,7 +9,7 @@ export function ExperienceSection() {
     <section id="experience" className="deferred-section section-space section-surface scroll-mt-24">
       <div className="shell">
         <SectionHeading
-          index="04 / 10"
+          index="04 / 06"
           eyebrow="Professional experience"
           title="Reliable work inside a collaborative care system."
           description="One current role is presented without inferring dates, departments, or employment terms that have not been verified."

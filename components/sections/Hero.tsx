@@ -1,10 +1,9 @@
-import { ArrowDown, ArrowRight, BadgeCheck, MapPin } from "lucide-react";
+import { ArrowDown, BadgeCheck, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import profilePhoto from "@/Amrita_Gautam454.jpeg";
 import { ClinicalPrecisionCard } from "@/components/sections/ClinicalPrecisionCard";
-import { ResumeButton } from "@/components/ui/ResumeButton";
 import { profile } from "@/data/profile";
 
 function HeroPortrait() {
@@ -61,10 +60,6 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 min-[420px]:flex-row min-[420px]:flex-wrap">
-            <ResumeButton />
-            <Link href="/contact" className="button-secondary">
-              Contact me <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
             <Link href="#experience" className="inline-flex min-h-11 items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-muted transition hover:text-medical-600 dark:hover:text-blue-300">
               View experience <ArrowDown className="h-4 w-4" aria-hidden="true" />
             </Link>
