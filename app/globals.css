@@ -1,0 +1,439 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: 255 255 255;
+  --surface: 248 250 252;
+  --ink: 15 23 42;
+  --muted: 71 85 105;
+  --line: 226 232 240;
+  --focus: 37 99 235;
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: 7 17 31;
+  --surface: 15 28 46;
+  --ink: 248 250 252;
+  --muted: 184 197 214;
+  --line: 47 66 88;
+  --focus: 96 165 250;
+  color-scheme: dark;
+}
+
+* {
+  border-color: rgb(var(--line));
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+body {
+  background: rgb(var(--canvas));
+  color: rgb(var(--ink));
+  font-family: "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+  color: rgb(var(--ink));
+}
+
+:focus-visible {
+  outline: 3px solid rgb(var(--focus));
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-space {
+    @apply py-20 sm:py-24 lg:py-32;
+  }
+
+  .section-surface {
+    @apply bg-surface;
+  }
+
+  .display-title {
+    font-family: var(--font-manrope), Manrope, ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(3.35rem, 8.8vw, 7.6rem);
+    line-height: 0.88;
+    letter-spacing: -0.065em;
+    text-wrap: balance;
+  }
+
+  .section-title {
+    font-family: var(--font-manrope), Manrope, ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(2rem, 4.2vw, 4rem);
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-medical-600 dark:text-blue-300;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-2 w-2 rounded-full bg-teal-500;
+    box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.12);
+  }
+
+  .body-copy {
+    @apply text-base leading-8 text-muted sm:text-lg;
+  }
+
+  .card {
+    @apply rounded-3xl border border-line bg-canvas shadow-soft transition duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1 hover:border-medical-500/35 hover:shadow-lift;
+  }
+
+  .button-primary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-medical-500 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-medical-600 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/25 disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:translate-y-0;
+  }
+
+  .button-secondary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-line bg-canvas px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-medical-500/45 hover:text-medical-600 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/20 dark:hover:text-blue-300;
+  }
+
+  .status-placeholder {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-dashed border-amber-500/45 bg-amber-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-amber-800 dark:bg-amber-950/30 dark:text-amber-200;
+  }
+
+  .icon-disc {
+    @apply inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-blue-200 bg-blue-50 text-medical-600 dark:border-blue-800 dark:bg-blue-950/50 dark:text-blue-300;
+  }
+
+  .field {
+    @apply min-h-12 w-full rounded-2xl border border-line bg-canvas px-4 py-3 text-base text-ink shadow-sm outline-none transition placeholder:text-muted/65 hover:border-slate-400 focus:border-medical-500 focus:ring-4 focus:ring-blue-500/10 dark:hover:border-slate-500;
+  }
+
+  .precision-rule {
+    @apply mt-5 flex w-28 items-center gap-2;
+  }
+
+  .precision-rule::before,
+  .precision-rule::after {
+    content: "";
+    @apply h-px flex-1 bg-line;
+  }
+
+  .precision-rule span {
+    @apply h-1.5 w-1.5 rounded-full bg-teal-500;
+  }
+}
+
+.clinical-grid-mask {
+  background-size: 32px 32px;
+  -webkit-mask-image: linear-gradient(to bottom, black 10%, transparent 82%);
+  mask-image: linear-gradient(to bottom, black 10%, transparent 82%);
+}
+
+@supports (content-visibility: auto) {
+  .deferred-section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .reveal-on-view {
+    animation: reveal-in 1ms both;
+    animation-delay: var(--reveal-delay, 0s);
+    animation-timeline: view();
+    animation-range: entry 0% entry 32%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-view {
+    animation: none !important;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.clinical-precision-card {
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+
+.precision-status-dot {
+  position: relative;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  flex: 0 0 auto;
+  border-radius: 9999px;
+  background: #14b8a6;
+  box-shadow: 0 0 8px rgba(20, 184, 166, 0.34);
+}
+
+.precision-status-dot::after {
+  content: "";
+  position: absolute;
+  inset: -0.3rem;
+  border: 1px solid rgba(45, 212, 191, 0.42);
+  border-radius: inherit;
+  opacity: 0;
+  transform: scale(0.55);
+  animation: precision-status-breathe 2.7s ease-out infinite;
+}
+
+.precision-waveform-panel {
+  contain: paint;
+}
+
+.precision-orbit-field {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.precision-ring {
+  grid-area: 1 / 1;
+  display: block;
+  border-radius: 9999px;
+  transform: scale(1);
+  will-change: transform, opacity;
+  animation: precision-ring-pulse 6.8s ease-in-out infinite;
+}
+
+.precision-ring-outer {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid rgba(20, 184, 166, 0.22);
+  opacity: 0.72;
+}
+
+.precision-ring-inner {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  opacity: 0.68;
+  animation-delay: 1.15s;
+}
+
+.precision-scan-line {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  left: 5%;
+  z-index: 20;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.48), transparent);
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.14);
+  opacity: 0;
+  transform: translate3d(0, -0.5rem, 0);
+  will-change: transform, opacity;
+  animation: precision-scan 3.8s ease-in-out infinite;
+}
+
+.precision-waveform-ghost,
+.precision-waveform-path,
+.precision-waveform-pulse {
+  fill: none;
+  stroke: #14b8a6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.precision-waveform-ghost {
+  stroke-width: 1.25;
+  opacity: 0.2;
+}
+
+.precision-waveform-path {
+  stroke-width: 2.5;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  filter: drop-shadow(0 0 2px rgba(45, 212, 191, 0.32));
+  animation: precision-waveform-draw 4.8s ease-in-out infinite;
+}
+
+.precision-waveform-pulse {
+  stroke-width: 4.5;
+  stroke-dasharray: 18 502;
+  stroke-dashoffset: 520;
+  opacity: 0;
+  filter: drop-shadow(0 0 4px rgba(94, 234, 212, 0.72));
+  animation: precision-waveform-pulse 4.8s linear infinite;
+}
+
+.precision-label {
+  transition: color 180ms ease, opacity 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .clinical-precision-card:hover .precision-label {
+    color: rgb(var(--ink));
+  }
+}
+
+@keyframes precision-status-breathe {
+  0% {
+    opacity: 0.34;
+    transform: scale(0.55);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
+
+@keyframes precision-waveform-draw {
+  0%,
+  8% {
+    opacity: 0;
+    stroke-dashoffset: 520;
+  }
+  14% {
+    opacity: 0.76;
+  }
+  52%,
+  89% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  97%,
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes precision-waveform-pulse {
+  0%,
+  51% {
+    opacity: 0;
+    stroke-dashoffset: 520;
+  }
+  57% {
+    opacity: 0.92;
+    stroke-dashoffset: 520;
+  }
+  85% {
+    opacity: 0.92;
+    stroke-dashoffset: 0;
+  }
+  91%,
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes precision-scan {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -0.5rem, 0);
+  }
+  12% {
+    opacity: 0.2;
+  }
+  82% {
+    opacity: 0.12;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 6.5rem, 0);
+  }
+}
+
+@keyframes precision-ring-pulse {
+  0%,
+  100% {
+    opacity: 0.68;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.28;
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .precision-status-dot::after,
+  .precision-ring,
+  .precision-scan-line,
+  .precision-waveform-path,
+  .precision-waveform-pulse {
+    animation: none !important;
+  }
+
+  .precision-status-dot::after,
+  .precision-scan-line,
+  .precision-waveform-pulse {
+    opacity: 0 !important;
+  }
+
+  .precision-ring {
+    transform: scale(1) !important;
+  }
+
+  .precision-waveform-path {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  .precision-label {
+    transition: none !important;
+  }
+}

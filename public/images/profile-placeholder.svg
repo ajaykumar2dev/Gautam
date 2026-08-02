@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Profile image placeholder</title>
+  <desc id="desc">Abstract blue and teal composition with the initials AG</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EFF6FF"/>
+      <stop offset=".55" stop-color="#DBEAFE"/>
+      <stop offset="1" stop-color="#CCFBF1"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#2563EB" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1100" rx="64" fill="url(#bg)"/>
+  <rect width="900" height="1100" rx="64" fill="url(#grid)"/>
+  <circle cx="450" cy="430" r="254" fill="#fff" fill-opacity=".56" stroke="#2563EB" stroke-opacity=".18" stroke-width="2"/>
+  <circle cx="450" cy="430" r="196" fill="none" stroke="#14B8A6" stroke-opacity=".35" stroke-width="2" stroke-dasharray="8 12"/>
+  <path d="M120 805h190l34-62 52 124 56-104 42 42h286" fill="none" stroke="#2563EB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="450" y="466" text-anchor="middle" font-family="Arial, sans-serif" font-size="138" font-weight="700" fill="#1E3A8A">AG</text>
+  <text x="450" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="7" fill="#0F766E">PROFILE IMAGE PLACEHOLDER</text>
+  <circle cx="110" cy="110" r="11" fill="#14B8A6"/>
+  <circle cx="790" cy="990" r="11" fill="#2563EB"/>
+</svg>

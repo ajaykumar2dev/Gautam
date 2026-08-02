@@ -1,0 +1,10 @@
+import type { GalleryItem } from "@/types/portfolio";
+
+export const galleryItems: GalleryItem[] = [
+  { id: 1, title: "Precision in practice", category: "Laboratory", description: "Editorial placeholder for a privacy-safe professional laboratory photograph.", src: "/images/gallery/laboratory-practice.svg", alt: "Abstract illustration of a clean clinical laboratory workspace", aspect: "landscape", isPlaceholder: true },
+  { id: 2, title: "Equipment care", category: "Equipment", description: "Placeholder for approved equipment imagery with no patient or sample data visible.", src: "/images/gallery/equipment-care.svg", alt: "Abstract illustration of laboratory equipment calibration", aspect: "portrait", isPlaceholder: true },
+  { id: 3, title: "Professional learning", category: "Events", description: "Placeholder for a professional training or healthcare event photograph.", src: "/images/gallery/professional-learning.svg", alt: "Abstract illustration representing professional healthcare learning", aspect: "square", isPlaceholder: true },
+  { id: 4, title: "Verified credentials", category: "Certificates", description: "Placeholder for a certificate image after personal details are reviewed for publication.", src: "/images/gallery/verified-credentials.svg", alt: "Abstract illustration of a professional certificate", aspect: "landscape", isPlaceholder: true },
+  { id: 5, title: "Collaborative care", category: "Team", description: "Placeholder for an approved team activity image with consent from everyone shown.", src: "/images/gallery/collaborative-care.svg", alt: "Abstract illustration representing healthcare team collaboration", aspect: "portrait", isPlaceholder: true },
+  { id: 6, title: "Quality workflow", category: "Laboratory", description: "Placeholder for a clean workflow image free of labels, reports, and confidential details.", src: "/images/gallery/quality-workflow.svg", alt: "Abstract clinical workflow diagram in blue and teal", aspect: "square", isPlaceholder: true },
+];

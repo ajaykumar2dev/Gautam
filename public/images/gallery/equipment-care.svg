@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Privacy-safe equipment care placeholder</title>
+  <desc id="desc">An abstract illustration of laboratory equipment calibration with generic controls and no patient or sample data.</desc>
+  <defs>
+    <linearGradient id="bg" x1="55" y1="40" x2="830" y2="1160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE"/>
+      <stop offset="0.46" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#CCFBF1"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1E3A8A"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#2563EB" opacity="0.1"/>
+    </pattern>
+    <filter id="shadow" x="-25%" y="-20%" width="150%" height="155%">
+      <feDropShadow dx="0" dy="26" stdDeviation="25" flood-color="#0F172A" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <path fill="url(#bg)" d="M0 0h900v1200H0z"/>
+  <path fill="url(#dots)" d="M0 0h900v1200H0z"/>
+  <circle cx="768" cy="214" r="228" fill="#2563EB" opacity="0.08"/>
+  <circle cx="82" cy="1018" r="238" fill="#14B8A6" opacity="0.1"/>
+
+  <g transform="translate(68 67)">
+    <rect width="357" height="50" rx="25" fill="#FFFFFF" fill-opacity="0.92" stroke="#BFDBFE"/>
+    <circle cx="27" cy="25" r="7" fill="#14B8A6"/>
+    <text x="48" y="31" fill="#1E3A8A" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">ILLUSTRATED PLACEHOLDER</text>
+  </g>
+
+  <g transform="translate(450 540)" opacity="0.65">
+    <circle r="299" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="8 20"/>
+    <circle r="247" fill="none" stroke="#14B8A6" stroke-width="2"/>
+    <path d="M0-322v38M0 284v38M-322 0h38M284 0h38" stroke="#1E3A8A" stroke-width="6" stroke-linecap="round"/>
+    <path d="m-228-228 27 27m402 402 27 27m0-456-27 27m-402 402-27 27" stroke="#0D9488" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(162 234)" filter="url(#shadow)">
+    <rect width="576" height="682" rx="64" fill="url(#body)" stroke="#BFDBFE" stroke-width="3"/>
+    <path d="M0 113h576" stroke="#BFDBFE" stroke-width="3"/>
+    <circle cx="52" cy="56" r="11" fill="#14B8A6"/>
+    <rect x="86" y="45" width="143" height="22" rx="11" fill="#CBD5E1"/>
+    <circle cx="516" cy="56" r="20" fill="#1E3A8A"/>
+    <circle cx="516" cy="56" r="8" fill="#5EEAD4"/>
+
+    <rect x="55" y="160" width="466" height="234" rx="35" fill="url(#screen)"/>
+    <circle cx="162" cy="277" r="71" fill="none" stroke="#93C5FD" stroke-width="18" opacity="0.55"/>
+    <path d="M162 206a71 71 0 0 1 61 107" fill="none" stroke="#5EEAD4" stroke-width="18" stroke-linecap="round"/>
+    <path d="m130 278 24 24 48-59" fill="none" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="276" y="213" width="185" height="17" rx="8.5" fill="#DBEAFE" opacity="0.75"/>
+    <rect x="276" y="254" width="135" height="17" rx="8.5" fill="#99F6E4" opacity="0.75"/>
+    <rect x="276" y="295" width="165" height="17" rx="8.5" fill="#DBEAFE" opacity="0.55"/>
+    <rect x="276" y="336" width="106" height="17" rx="8.5" fill="#99F6E4" opacity="0.55"/>
+
+    <rect x="55" y="443" width="466" height="174" rx="35" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+    <g fill="#EFF6FF" stroke="#93C5FD" stroke-width="3">
+      <circle cx="129" cy="530" r="38"/>
+      <circle cx="240" cy="530" r="38"/>
+      <circle cx="351" cy="530" r="38"/>
+    </g>
+    <path d="M129 509v42m-21-21h42" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+    <path d="m221 531 13 13 28-33" fill="none" stroke="#0D9488" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M331 530h40" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+    <rect x="417" y="499" width="69" height="62" rx="21" fill="#1E3A8A"/>
+    <circle cx="451.5" cy="530" r="11" fill="#5EEAD4"/>
+  </g>
+
+  <g transform="translate(290 966)">
+    <rect width="320" height="84" rx="42" fill="#1E3A8A"/>
+    <path d="M69 42h182" stroke="#93C5FD" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="161" cy="42" r="16" fill="#5EEAD4"/>
+  </g>
+
+  <text x="450" y="1128" text-anchor="middle" fill="#1E3A8A" fill-opacity="0.7" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">NO IDENTIFIERS · NO SAMPLE DATA · CONCEPT ART</text>
+</svg>
